@@ -44,7 +44,8 @@ library(countrycode)
 world_data <- mutate(world_data,continent=countrycode(country,'country.name','continent'))
 
 # make final plot
+library(scales)
 ggplot(data=world_data)+
   geom_point(mapping=aes(x=GDP,y=Life_Expectancy,size=pop,color=continent))+
-  scale_x_log10()+
+  scale_x_log10(labels=comma)+
   scale_size_continuous(range = c(1,12))

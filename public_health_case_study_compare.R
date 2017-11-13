@@ -84,10 +84,41 @@ ggplot(data=world_data2015)+
   annotate("text", x = 4000, y = 33, label = "1815")+
   annotate("text", x = 700, y = 75, label = "2015")
 
+#Africa
 ggplot(data=filter(world_data2015,continent=='Africa'))+
   geom_point(mapping=aes(x=GDP,y=Life_Expectancy,size=pop,color=continent))+
   scale_size_continuous(range = c(1,12))+
   geom_point(data=filter(world_data1815,continent=='Africa'),mapping=aes(x=GDP,y=Life_Expectancy,size=pop,color=continent))+
+  scale_x_log10(limits = c(250,200000))+
+  ylim(10,90)+
+  annotate("text", x = 4000, y = 33, label = "1815")+
+  annotate("text", x = 700, y = 75, label = "2015")
+
+#Americas
+ggplot(data=filter(world_data2015,continent=='Americas'))+
+  geom_point(mapping=aes(x=GDP,y=Life_Expectancy,size=pop,color=continent))+
+  scale_size_continuous(range = c(1,12))+
+  geom_point(data=filter(world_data1815,continent=='Americas'),mapping=aes(x=GDP,y=Life_Expectancy,size=pop,color=continent))+
+  scale_x_log10(limits = c(250,200000))+
+  ylim(10,90)+
+  annotate("text", x = 4000, y = 33, label = "1815")+
+  annotate("text", x = 700, y = 75, label = "2015")
+
+#Asia
+ggplot(data=filter(world_data2015,continent=='Asia'))+
+  geom_point(mapping=aes(x=GDP,y=Life_Expectancy,size=pop,color=continent))+
+  scale_size_continuous(range = c(1,12))+
+  geom_point(data=filter(world_data1815,continent=='Asia'),mapping=aes(x=GDP,y=Life_Expectancy,size=pop,color=continent))+
+  scale_x_log10(limits = c(250,200000))+
+  ylim(10,90)+
+  annotate("text", x = 4000, y = 33, label = "1815")+
+  annotate("text", x = 700, y = 75, label = "2015")
+
+#Africa and Americas
+ggplot(data=filter(world_data2015,continent=='Americas'| continent=='Africa'))+
+  geom_point(mapping=aes(x=GDP,y=Life_Expectancy,size=pop,color=continent))+
+  scale_size_continuous(range = c(1,12))+
+  geom_point(data=filter(world_data1815,continent=='Americas'| continent=='Africa'),mapping=aes(x=GDP,y=Life_Expectancy,size=pop,color=continent))+
   scale_x_log10(limits = c(250,200000))+
   ylim(10,90)+
   annotate("text", x = 4000, y = 33, label = "1815")+
