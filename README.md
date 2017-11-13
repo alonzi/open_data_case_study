@@ -13,6 +13,7 @@ The first three are for the global case study and come from gapminder.org
 1. income.xlsx
 2. life_expectancy.xlsx
 3. population.xlsx
+
 The last is for the local case study and comes from the Charlottesville Open Data Portal
 1. Real_Estate_Sales.csv
 
