@@ -19,5 +19,5 @@ The last is for the local case study and comes from the Charlottesville Open Dat
 ## Slides
 The slides for this talk are in powerpoint format and zipped up here alonzi-presentation-novid.pptx.zip. One slide has been altered. It contained a video and that made it too large to upload to github so the video was removed.
 
-
+##
 Please feel free to peruse any and all of these resources as we go through the workshop today.
